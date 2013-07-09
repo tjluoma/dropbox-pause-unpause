@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>AbandonProcessGroup</key>
+	<true/>
+	<key>Label</key>
+	<string>com.tjluoma.is-dropbox-paused</string>
+	<key>ProgramArguments</key>
+	<array>
+		<string>/usr/bin/env</string>
+		<string>is-dropbox-paused.sh</string>
+	</array>
+	<key>StandardErrorPath</key>
+	<string>/tmp/is-dropbox-paused-err.txt</string>
+	<key>StandardOutPath</key>
+	<string>/dev/null</string>
+	<key>StartInterval</key>
+	<integer>900</integer>
+</dict>
+</plist>
