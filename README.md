@@ -74,7 +74,7 @@ I suggest running a `launchd` process to remind you when Dropbox is paused, so y
 
 If you're on Mountain Lion, you might want to install [terminal-notifier-dropbox](http://files.tjluoma.com/terminal-notifier-dropbox.zip). Otherwise the notifications will be sent via [Growl] and [growlnotify] -- assuming they are installed, otherwise the notifications will not be visible, which would be rather pointless.
 
-By default, **`is-dropbox-paused.sh`** will run every 15 minutes (900 seconds) but you can change that by editing this part of **`com.tjluoma.is-dropbox-paused.plist`**:
+By default, `is-dropbox-paused.sh` will run every 15 minutes (900 seconds) but you can change that by editing this part of `com.tjluoma.is-dropbox-paused.plist`:
 
 		<key>StartInterval</key>
 		<integer>900</integer>
