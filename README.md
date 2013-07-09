@@ -15,7 +15,7 @@ Before I begin, let me make a few things clear:
 
 ## How to use this script ##
 
-The script **`dropbox-pause-unpause.sh`** can be used in one of three ways:
+The script `dropbox-pause-unpause.sh` can be used in one of three ways:
 
 1) If you want to see Dropbox.app's status, use:
 
@@ -31,15 +31,15 @@ The script **`dropbox-pause-unpause.sh`** can be used in one of three ways:
 
 ## How it works (technical details) ##
 
-Under the hood, **`dropbox-pause-unpause.sh`** is doing some very basic Unix-y things.
+Under the hood, `dropbox-pause-unpause.sh` is doing some very basic Unix-y things.
 
-If you tell **`dropbox-pause-unpause.sh`** to pause Dropbox, it will send:
+If you tell `dropbox-pause-unpause.sh` to pause Dropbox, it will send:
 
 		kill -STOP <pid>
 
 where `<pid>` is the process ID number for Dropbox.app. This will have the effect of "freezing" Dropbox.app so it will not consume any bandwidth or any CPU.
 
-If you tell **`dropbox-pause-unpause.sh`** to resume/un-pause, the script will send:
+If you tell `dropbox-pause-unpause.sh` to resume/un-pause, the script will send:
 
 		kill -CONT <pid>
 
@@ -54,7 +54,7 @@ If you try to un-pause/resume Dropbox.app when it is not running, the script wil
 ## Warning ##
 
 If you pause Dropbox.app, the menu bar icon will 'freeze' in its current state, which means that you will most likely see one of these icons (or the black-and-white equivalents) in the menu bar:
-<img alt='[icon representing "Dropbox is busy"]' src="dropboxstatus-busy.tiff" width="18" height="18" border="0" />
+<img alt='[icon representing "Dropbox is busy"]' src="dropboxstatus-busy.tiff" width="18" height="18" border="0" /> or 
 <img alt='[icon representing "Dropbox is up to date"]' src="dropboxstatus-idle.tiff" width="18" height="18" border="0" />
 
 However, Dropbox.app ***will not actually be busy or up-to-date.***
@@ -81,7 +81,7 @@ By default, `is-dropbox-paused.sh` will run every 15 minutes (900 seconds) but y
 
 Change '900' to however many seconds you want to elapse between checks.
 
-Note that **`is-dropbox-paused.sh`** is intentionally designed to exit very quickly if Dropbox is *not* paused, so it should have a negligible effect on your Mac. However, **`dropbox-pause-unpause.sh`** is designed to automatically load **`com.tjluoma.is-dropbox-paused.plist`** when Dropbox is paused and unload it when it is un-paused, so it will not be running unless you have paused Dropbox.
+Note that `is-dropbox-paused.sh` is intentionally designed to exit very quickly if Dropbox is *not* paused, so it should have a negligible effect on your Mac. However, `dropbox-pause-unpause.sh` is designed to automatically load `com.tjluoma.is-dropbox-paused.plist` when Dropbox is paused and unload it when it is un-paused, so it will not be running unless you have paused Dropbox.
 
 [growlnotify]: http://growl.info/downloads
 [Growl]: http://growl.info
